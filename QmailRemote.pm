@@ -6,7 +6,7 @@ use vars qw($VERSION);
 use Net::DNS;
 use IPC::Open3;
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -177,7 +177,7 @@ MX or A Record is searched by Net::DNS module.
 
 =head1 CONSTRUCTOR
 
-=item new(QMAIL_REMOTe)
+=item new(QMAIL_REMOTE)
 
 construtor for Mail::QmailRemote object.
 QMAIL_REMOTE is location of qmail-remote program 
@@ -213,6 +213,10 @@ set mail message. (including header.)
 
 send mail.
 
+=item errstr
+
+if some problem has occured, return error message from qmail-remote.
+
 =back
 
 =head1 AUTHOR
@@ -224,6 +228,12 @@ IKEBE Tomohiro <ikebe@cpan.org>
 L<Net::DNS> L<IPC::Open3> L<Mail::QmailQueue>
 
 L<qmail-remote(8)>
+
+=head1 COPYRIGHT
+
+Copyright(C) 2001 IKEBE Tomohiro All rights reserved.
+
+This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
 =cut
 
